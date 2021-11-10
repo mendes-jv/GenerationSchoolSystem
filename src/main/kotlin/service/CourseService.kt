@@ -7,6 +7,7 @@ import model.Student
 import java.util.ArrayList
 
 class CourseService {
+
     private val courses: MutableMap<String, Course> = HashMap()
     private val enrolledStudents: MutableMap<String, MutableList<Student>> = HashMap()
     fun registerCourse(course: Course) {

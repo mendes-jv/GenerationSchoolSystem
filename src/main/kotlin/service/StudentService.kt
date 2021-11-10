@@ -5,7 +5,9 @@ import java.util.HashMap
 import model.Course
 
 class StudentService {
+
     private val students: MutableMap<String?, Student> = HashMap()
+
     fun subscribeStudent(student: Student) {
         students[student.id] = student
     }
@@ -17,12 +19,11 @@ class StudentService {
     }
 
     fun isSubscribed(studentId: String?): Boolean {
-        //TODO implement this method
-        return false
+        return students.containsKey(studentId)
     }
 
     fun showSummary() {
-        //TODO implement
+        println("Subscribed students: ${students.values}")
     }
 
     fun enrollToCourse(studentId: String?, course: Course?) {
